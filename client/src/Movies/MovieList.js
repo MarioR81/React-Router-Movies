@@ -32,13 +32,13 @@ const MovieList = props => {
 }
 
 function MovieDetails({ movie }) {
-  const { title, director, metascore, stars } = movie;
+  const { title, director, metascore, stars, id } = movie;
   // console.log('movielist' , movie);
   const match = useRouteMatch()
-  console.log(match.path);
+  // console.log(match.path);
 
   return (
-<Link to='/Movies/:id' >
+<Link to={`/movies/${id}`}>
   
     <div className="movie-card">
       <h2>{title}</h2>
